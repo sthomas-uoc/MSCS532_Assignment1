@@ -10,21 +10,31 @@ def ins_sort(data):
                 data[j] = t
             # print(i, j, data)
 
-    return data
-
 def demo_ins_sort():
 
+    # Create serial data
     data = list(range(0, 10))
 
-    print(data)
+    # print(data)
 
-    print(data[0], data[len(data) - 1])
+    # print(data[0], data[len(data) - 1])
 
-    sorted = ins_sort(data)
+    ins_sort(data)
 
-    print(data)
+    # print(data)
 
-    assert sorted[0] == data[len(data) - 1]
+    # Verify 
+    assert 0 == data[len(data) - 1]
+    assert 9 == data[0]
+
+    data = list(range(10, 0, -1))
+    # print(data)
+    ins_sort(data)
+    # print(data)
+    assert 1 == data[len(data) - 1]
+    assert 10 == data[0]
+
+    
 
 if __name__ == "__main__":
     demo_ins_sort()
