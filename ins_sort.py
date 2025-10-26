@@ -28,6 +28,7 @@ def demo_ins_sort():
     # Verify 
     assert 0 == data[len(data) - 1]
     assert 9 == data[0]
+    print("Serial increasing data sorted correctly")
 
     # Create reversed serial data
     data = list(range(10, 0, -1))
@@ -36,6 +37,7 @@ def demo_ins_sort():
     # print(data)
     assert 1 == data[len(data) - 1]
     assert 10 == data[0]
+    print("Serial decreasing data sorted correctly")
 
     # Create random data
     data = random.sample(range(50, 5000), 100)
@@ -43,6 +45,7 @@ def demo_ins_sort():
     ins_sort(data)
     # print(data)
     assert data[0] > data[len(data) - 1]
+    print("Random data sorted correctly")
 
 if __name__ == "__main__":
     demo_ins_sort()
